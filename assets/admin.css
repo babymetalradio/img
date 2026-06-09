@@ -1,0 +1,331 @@
+/* =========================
+   ADMIN PANEL
+========================= */
+
+.admin-container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.admin-title{
+font-size:32px;
+font-weight:bold;
+color:#e50914;
+margin-bottom:20px;
+}
+
+/* =========================
+   ESTADISTICAS
+========================= */
+
+.admin-stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:25px;
+}
+
+.admin-stats div{
+background:#181818;
+padding:20px;
+border-radius:10px;
+font-size:22px;
+font-weight:bold;
+text-align:center;
+border:1px solid #333;
+}
+
+.admin-stats span{
+display:block;
+margin-top:10px;
+font-size:32px;
+color:#e50914;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.admin-form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:30px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select{
+width:100%;
+padding:12px;
+background:#222;
+border:1px solid #333;
+color:white;
+border-radius:6px;
+outline:none;
+}
+
+.admin-form textarea{
+min-height:120px;
+resize:vertical;
+}
+
+/* =========================
+   METARAJI
+========================= */
+
+#metarajiFields{
+display:none;
+grid-column:span 2;
+}
+
+#metarajiFields.active{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.admin-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.admin-btn{
+background:#e50914;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.admin-btn:hover{
+background:#ff1f2f;
+transform:translateY(-2px);
+}
+
+/* =========================
+   VISTA PREVIA
+========================= */
+
+.preview-container{
+background:#181818;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+margin-bottom:30px;
+}
+
+.preview-card{
+max-width:350px;
+}
+
+.preview-card img{
+width:100%;
+height:450px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.preview-title{
+font-size:22px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.preview-meta{
+margin-top:10px;
+color:#ccc;
+}
+
+.preview-description{
+margin-top:15px;
+line-height:1.6;
+}
+
+#previewTrailer iframe{
+width:100%;
+height:220px;
+border:none;
+border-radius:10px;
+background:#000;
+margin-top:10px;
+}
+
+/* =========================
+   JSON
+========================= */
+
+.admin-json{
+margin-top:30px;
+}
+
+.admin-json textarea{
+width:100%;
+height:250px;
+background:#111;
+color:#00ff88;
+padding:15px;
+border:1px solid #333;
+border-radius:6px;
+font-family:monospace;
+}
+
+/* =========================
+   TABLA
+========================= */
+
+.admin-table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+.admin-table th,
+.admin-table td{
+border:1px solid #333;
+padding:10px;
+text-align:left;
+}
+
+.admin-table th{
+background:#111;
+color:white;
+}
+
+.admin-table tr:hover{
+background:rgba(255,255,255,.05);
+}
+
+.admin-table button{
+cursor:pointer;
+padding:5px 10px;
+margin:2px;
+border:none;
+border-radius:6px;
+}
+
+.admin-table button:hover{
+transform:scale(1.05);
+}
+
+/* =========================
+   CABECERAS
+========================= */
+
+.admin-seccion-conciertos{
+background:#e50914 !important;
+color:white !important;
+font-weight:bold;
+font-size:16px;
+text-align:center;
+}
+
+.admin-seccion-metaraji{
+background:#333 !important;
+color:white !important;
+font-weight:bold;
+font-size:16px;
+text-align:center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.admin-form{
+grid-template-columns:1fr;
+}
+
+#metarajiFields.active{
+grid-template-columns:1fr;
+}
+
+.preview-card{
+max-width:100%;
+}
+
+.admin-actions{
+flex-direction:column;
+}
+
+.admin-btn{
+width:100%;
+}
+
+.admin-table{
+font-size:14px;
+}
+
+.admin-stats{
+grid-template-columns:1fr 1fr;
+}
+
+}
+/* =========================
+   TMDB
+========================= */
+
+.tmdb-box{
+display:flex;
+gap:10px;
+grid-column:span 2;
+margin-bottom:10px;
+}
+
+.tmdb-box input{
+flex:1;
+}
+
+@media(max-width:768px){
+
+.tmdb-box{
+flex-direction:column;
+grid-column:span 1;
+}
+
+}
+/* TMDB */
+
+.tmdb-box{
+grid-column:span 2;
+display:flex;
+gap:10px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.tmdb-box input{
+flex:1;
+}
+
+#tmdbResultados{
+width:100%;
+margin-top:10px;
+}
+
+.tmdb-item{
+padding:10px;
+background:#222;
+border:1px solid #333;
+border-radius:6px;
+cursor:pointer;
+margin-bottom:5px;
+transition:.2s;
+}
+
+.tmdb-item:hover{
+background:#e50914;
+border-color:#e50914;
+}
